@@ -36,4 +36,10 @@ class BySubjectGradeBook(object):
 # Imagine our requirements change again. Now we want to average the student's score
 # by certain weights, positional arguments in class methods are getting more unclear.
 
-# Refactoring to classes
+# Refactoring to classes: A tuple is appropriate because grades are immutable.
+grades = []
+grades.append((95, 0.45))  # (score, weight)
+
+import collections
+Grade = collections.namedtuple('Grade', ('score', 'weight'))
+
